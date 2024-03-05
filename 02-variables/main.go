@@ -15,7 +15,10 @@ var GlobalBoolVal bool = true
 
 func main() {
 	printType()
+	varDeclaration()
+}
 
+func varDeclaration() {
 	var userName string = "whatsbehind"
 	fmt.Println(userName)
 	fmt.Printf("Variable is of type: %T \n", userName)
