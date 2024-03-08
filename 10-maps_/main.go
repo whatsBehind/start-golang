@@ -6,6 +6,8 @@ func main() {
 	getAnItem()
 	updateAnItem()
 	iterateMap()
+	printMapDetails()
+	deleteAnItem()
 }
 
 func makeAMap() map[string]string {
@@ -31,4 +33,17 @@ func iterateMap() {
 	for key, value := range makeAMap() {
 		fmt.Printf("key is %v, and value is %v\n", key, value)
 	}
+}
+
+func printMapDetails() {
+	var languages = makeAMap()
+	fmt.Printf("Print map details %v\n", languages)
+}
+
+func deleteAnItem() {
+	var languages = makeAMap()
+	fmt.Println("Map before deleting: ", languages)
+
+	delete(languages, "js")
+	fmt.Println("Delete \"js\" from the map: ", languages)
 }
